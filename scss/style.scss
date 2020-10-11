@@ -1,0 +1,159 @@
+@import '_variables';
+@import '_fonts';
+
+*,
+*::before,
+::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+.button {
+   border-radius: $borderRadius;
+   font-size: $btn-fontSize;
+   height: $btn-height;
+   outline: $btn-Outline;
+}
+
+header {
+   background-color: $color-light;
+   min-height: 100vh;
+   width: 100%;
+
+   nav {}
+
+   .hero {
+      display: flex;
+      flex-direction: column;
+      padding-left: 5vw;
+      padding-right: 5vw;
+
+      &__title {
+         font-family: $h1-fontFamily;
+         font-style: normal;
+         font-weight: 500;
+         font-size: 2.5rem;
+         line-height: 40px;
+      }
+
+      &__myname {
+         color: #444;
+         font-family: $h2-fontFamily;
+         font-weight: 900;
+         font-size: 1rem !important;
+         line-height: 22px;
+         padding: 5px 0;
+      }
+
+      p {
+         font-family: $p-fontFamily;
+         font-weight: $p-fontWeight;
+         font-size: $p-fontSize;
+         line-height: $p-lineHeight;
+         padding: 1.5rem 0;
+      }
+
+      &__cta {
+         display: flex;
+         flex-direction: column;
+         padding: 2rem 0;
+         width: 200px;
+
+         .cta-projects {
+            margin-bottom: 1rem;
+         }
+
+         .cta-contact {}
+      }
+   }
+}
+
+main {
+
+   .bio {
+      padding-left: 5vw;
+      padding-right: 5vw;
+
+      &__header {
+         font-family: $h2-fontFamily;
+         padding-bottom: $h2-paddingBottom;
+      }
+
+      &__paragraph {
+         font-family: $p-fontFamily;
+         font-size: $p-fontSize;
+         font-weight: $p-fontWeight;
+         line-height: $p-lineHeight;
+      }
+
+      &__image {
+         border-radius: $borderRadius;
+         display: block;
+         height: auto;
+         padding: 2rem 0;
+         width: 200px;
+      }
+   }
+
+   .projects {
+      padding-left: 5vw;
+      padding-right: 5vw;
+
+      &__title {
+         font-family: $h2-fontFamily;
+         padding-bottom: $h2-paddingBottom;
+         text-align: center;
+      }
+
+      &__container {
+         display: grid;
+         grid-template-columns: 1;
+         justify-items: center;
+
+         .item {
+            display: block;
+            height: auto;
+            max-width: 400px;
+            padding: 2rem 0;
+            width: 100%;
+         }
+
+         .project-1 {}
+
+         .project-2 {}
+
+         .project-3 {}
+
+         .project-4 {}
+      }
+   }
+
+   .contact {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: left;
+      padding-left: 5vw;
+      padding-right: 5vw;
+
+
+      form {
+         display: grid;
+         grid-template-columns: 1fr;
+         max-width: 400px;
+         width: 100%;
+
+         .submit-container {
+            text-align: center;
+            width: 100%;
+
+            .submit {
+               padding: 0.5rem;
+               width: fit-content;
+            }
+         }
+      }
+   }
+}
+
+footer {}
