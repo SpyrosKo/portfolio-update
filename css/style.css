@@ -1,0 +1,173 @@
+@font-face {
+  font-family: Mont-reg;
+  src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Mont-med;
+  src: url(../fonts/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: Mont-light;
+  src: url(../fonts/Montserrat/Montserrat-Light.ttf);
+}
+
+*,
+*::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  border-radius: 20%;
+  font-size: 1.2rem;
+  height: 40px;
+  outline: none;
+}
+
+header {
+  background-color: #fff;
+  min-height: 100vh;
+  width: 100%;
+}
+
+header .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+header .hero__title {
+  font-family: Mont-reg, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 40px;
+}
+
+header .hero__myname {
+  color: #444;
+  font-family: Mont-reg, sans-serif;
+  font-weight: 900;
+  font-size: 1rem !important;
+  line-height: 22px;
+  padding: 5px 0;
+}
+
+header .hero p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 32px;
+  padding: 1.5rem 0;
+}
+
+header .hero__cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 0;
+  width: 200px;
+}
+
+header .hero__cta .cta-projects {
+  margin-bottom: 1rem;
+}
+
+main .bio {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+main .bio__header {
+  font-family: Mont-reg, sans-serif;
+  padding-bottom: 3rem;
+}
+
+main .bio__paragraph {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 32px;
+}
+
+main .bio__image {
+  border-radius: 20%;
+  display: block;
+  height: auto;
+  padding: 2rem 0;
+  width: 200px;
+}
+
+main .projects {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+main .projects__title {
+  font-family: Mont-reg, sans-serif;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+main .projects__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1;
+      grid-template-columns: 1;
+  justify-items: center;
+}
+
+main .projects__container .item {
+  display: block;
+  height: auto;
+  max-width: 400px;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+main .contact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  justify-items: left;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+main .contact form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  max-width: 400px;
+  width: 100%;
+}
+
+main .contact form .submit-container {
+  text-align: center;
+  width: 100%;
+}
+
+main .contact form .submit-container .submit {
+  padding: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+/*# sourceMappingURL=style.css.map */
