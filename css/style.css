@@ -55,6 +55,7 @@ p {
   font-weight: 300;
   line-height: 38px;
   padding: 1.5rem 0;
+  max-width: 550px;
 }
 
 img {
@@ -99,8 +100,10 @@ button {
 
 header {
   background-color: #fff;
-  min-height: 115vh;
+  min-height: 100%;
   width: 100%;
+  padding-bottom: 7rem;
+  padding-top: 7rem;
 }
 
 header .hero {
@@ -157,25 +160,41 @@ main .bio {
   padding-right: 5vw;
 }
 
-main .bio__header {
+main .bio__title {
+  color: #fff;
+  padding-bottom: 5rem;
+}
+
+main .bio__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .bio__container .bio__paragraph {
   color: #fff;
 }
 
-main .bio__paragraph {
-  color: #fff;
-}
-
-main .bio__image {
+main .bio__container .bio__image {
   border-radius: 50%;
   margin: 2rem 0;
   margin-left: 5vw;
   width: 200px;
+  height: 200px;
 }
 
 main .projects {
   padding: 7rem;
   padding-left: 5vw;
   padding-right: 5vw;
+}
+
+main .projects__title {
+  padding-bottom: 7rem;
 }
 
 main .projects__container {
@@ -379,5 +398,30 @@ footer {
   letter-spacing: 1px;
   width: 100%;
   text-transform: uppercase;
+}
+
+@media (min-width: 599px) {
+  main .bio__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main .bio__container .bio__image {
+    margin: 1.5rem;
+  }
+  main .projects__container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+  }
+  main .projects__container figure {
+    margin-bottom: 4rem;
+  }
+  .footer {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 /*# sourceMappingURL=style.css.map */
