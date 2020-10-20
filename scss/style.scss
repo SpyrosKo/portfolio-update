@@ -1,5 +1,6 @@
 @import '_variables';
 @import '_fonts';
+@import '_mixins';
 
 *,
 *::before,
@@ -45,6 +46,7 @@ p {
    font-weight: 300;
    line-height: 38px;
    padding: 1.5rem 0;
+   max-width: 550px;
 }
 
 img {
@@ -90,8 +92,10 @@ button {
 
 header {
    background-color: $color-light;
-   min-height: 115vh;
+   min-height: 100%;
    width: 100%;
+   padding-bottom: 7rem;
+   padding-top: 7rem;
 
    nav {}
 
@@ -142,19 +146,26 @@ main {
       padding-left: 5vw;
       padding-right: 5vw;
 
-      &__header {
+      &__title {
          color: $color-light;
+         padding-bottom: 5rem;
       }
 
-      &__paragraph {
-         color: $color-light;
-      }
+      &__container {
+         display: flex;
+         flex-direction: column;
 
-      &__image {
-         border-radius: 50%;
-         margin: 2rem 0;
-         margin-left: 5vw;
-         width: 200px;
+         .bio__paragraph {
+            color: $color-light;
+         }
+
+         .bio__image {
+            border-radius: 50%;
+            margin: 2rem 0;
+            margin-left: 5vw;
+            width: 200px;
+            height: 200px;
+         }
       }
    }
 
@@ -165,7 +176,9 @@ main {
       padding-left: 5vw;
       padding-right: 5vw;
 
-      &__title {}
+      &__title {
+         padding-bottom: 7rem;
+      }
 
       &__container {
          display: grid;
@@ -328,3 +341,5 @@ footer {
    width: 100%;
    text-transform: uppercase;
 }
+
+@import '_tablet';

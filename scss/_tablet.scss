@@ -1,0 +1,33 @@
+@include tablet {
+
+   main {
+      .bio {
+         &__container {
+            flex-direction: row;
+
+            .bio__image {
+               margin: 1.5rem;
+            }
+         }
+      }
+
+      .projects {
+
+         &__container {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 3rem;
+            // padding:
+
+            figure {
+               margin-bottom: 4rem;
+            }
+         }
+      }
+   }
+
+   .footer {
+      justify-content: space-evenly;
+   }
+
+
+}
