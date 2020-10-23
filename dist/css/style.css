@@ -160,7 +160,7 @@ main .bio {
   padding-right: 5vw;
 }
 
-main .bio__title {
+main .bio .bio__title {
   color: #fff;
   padding-bottom: 5rem;
 }
@@ -175,16 +175,16 @@ main .bio__container {
           flex-direction: column;
 }
 
-main .bio__container .bio__paragraph {
-  color: #fff;
-}
-
 main .bio__container .bio__image {
   border-radius: 50%;
   margin: 2rem 0;
   margin-left: 5vw;
   width: 200px;
   height: 200px;
+}
+
+main .bio__container .bio__paragraph {
+  color: #fff;
 }
 
 main .projects {
@@ -206,7 +206,13 @@ main .projects__container {
   width: 100%;
 }
 
-main .projects__container img.item {
+main .projects__container .figure {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 7rem;
+}
+
+main .projects__container .figure__image {
   display: block;
   height: auto;
   max-width: 400px;
@@ -214,20 +220,15 @@ main .projects__container img.item {
   border: 1px solid;
 }
 
-main .projects__container figure {
+main .projects__container .figure__figcaption {
   position: relative;
-  overflow: hidden;
-  margin-bottom: 7rem;
-}
-
-main .projects__container figcaption {
-  position: absolute;
-  bottom: 0;
   left: 0;
   right: 0;
-  -webkit-transform: translateY(70%);
-          transform: translateY(70%);
-  overflow: hidden;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
   z-index: -1;
@@ -236,32 +237,31 @@ main .projects__container figcaption {
   border: 1px solid rgba(17, 17, 17, 0.274);
 }
 
-main .projects__container figure:hover figcaption::after {
-  opacity: 0.5;
+main .projects__container .figure__figcaption h2 {
+  position: absolute;
+  margin: 1rem;
+  color: #000;
 }
 
-main .projects__container figure:hover figcaption {
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
+main .projects__container .figure__figcaption .description {
+  position: absolute;
+  margin: 1rem;
+}
+
+main .projects__container .figure__figcaption h2 {
+  margin: 1rem;
+}
+
+main .projects__container .figure:hover .figure__figcaption {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   z-index: 1;
   opacity: 1;
-  background-color: rgba(255, 255, 255, 0.623);
+  background-color: rgba(151, 96, 96, 0.623);
 }
 
-main .projects__container figure:hover img {
+main .projects__container .figure:hover .figure__image {
   opacity: 0.8;
-}
-
-main .projects__container h2 {
-  margin: 1rem;
-}
-
-main .projects__container .description {
-  margin: 1rem;
-}
-
-main .projects__container .project-1 {
-  border: 1px solid #111;
 }
 
 main .contact {
@@ -403,9 +403,9 @@ footer {
 @media (min-width: 599px) {
   main .bio__container {
     -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
   main .bio__container .bio__image {
     margin: 1.5rem;

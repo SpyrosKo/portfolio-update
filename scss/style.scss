@@ -146,7 +146,7 @@ main {
       padding-left: 5vw;
       padding-right: 5vw;
 
-      &__title {
+      .bio__title {
          color: $color-light;
          padding-bottom: 5rem;
       }
@@ -155,16 +155,16 @@ main {
          display: flex;
          flex-direction: column;
 
-         .bio__paragraph {
-            color: $color-light;
-         }
-
          .bio__image {
             border-radius: 50%;
             margin: 2rem 0;
             margin-left: 5vw;
             width: 200px;
             height: 200px;
+         }
+
+         .bio__paragraph {
+            color: $color-light;
          }
       }
    }
@@ -186,67 +186,70 @@ main {
          justify-items: center;
          width: 100%;
 
-         img.item {
-            display: block;
-            height: auto;
-            max-width: 400px;
-            width: 100%;
-            border: 1px solid;
-         }
-
-         figure {
+         .figure {
             position: relative;
             overflow: hidden;
             margin-bottom: 7rem;
+
+            &__image {
+               display: block;
+               height: auto;
+               max-width: 400px;
+               width: 100%;
+               border: 1px solid;
+            }
+
+            &__figcaption {
+               position: relative;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               top: 0;
+               height: 100%;
+               transform: translateY(0);
+               transition: all 350ms ease-in-out;
+               z-index: -1;
+               opacity: 0;
+               text-align: left;
+               border: 1px solid rgba(17, 17, 17, 0.274);
+
+               h2 {
+                  position: absolute;
+                  margin: 1rem;
+                  color: #000;
+                  // transform: translateY(-30%);
+               }
+
+               .description {
+                  position: absolute;
+                  margin: 1rem;
+               }
+
+               h2 {
+                  margin: 1rem;
+               }
+
+
+            }
+
+            &:hover .figure__figcaption {
+               transform: translateY(-50%);
+               z-index: 1;
+               opacity: 1;
+               background-color: rgba(151, 96, 96, 0.623);
+            }
+
+
+            &:hover .figure__image {
+               opacity: 0.8;
+            }
          }
 
-         figcaption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            transform: translateY(70%);
-            overflow: hidden;
-            transition: all 350ms ease-in-out;
-            z-index: -1;
-            opacity: 0;
-            text-align: left;
-            border: 1px solid rgba(17, 17, 17, 0.274);
-         }
 
-         figure:hover figcaption::after {
-            opacity: 0.5;
-         }
 
-         figure:hover figcaption {
-            transform: translateY(-30%);
-            z-index: 1;
-            opacity: 1;
-            background-color: rgba(255, 255, 255, 0.623);
-            // border-top: none;
-         }
 
-         figure:hover img {
-            opacity: 0.8;
-         }
 
-         h2 {
-            margin: 1rem;
-         }
 
-         .description {
-            margin: 1rem;
-         }
-
-         .project-1 {
-            border: 1px solid #111;
-         }
-
-         .project-2 {}
-
-         .project-3 {}
-
-         .project-4 {}
       }
    }
 
