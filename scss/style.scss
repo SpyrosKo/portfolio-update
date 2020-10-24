@@ -206,50 +206,67 @@ main {
                bottom: 0;
                top: 0;
                height: 100%;
+               -webkit-transform: translateY(0);
                transform: translateY(0);
                transition: all 350ms ease-in-out;
                z-index: -1;
-               opacity: 0;
+               // opacity: 0;
                text-align: left;
-               border: 1px solid rgba(17, 17, 17, 0.274);
+               // border: 1px solid rgba(17, 17, 17, 0.274);
 
                h2 {
                   position: absolute;
-                  margin: 1rem;
-                  color: #000;
-                  // transform: translateY(-30%);
+                  color: #fff;
+                  transition: all 500ms;
+                  -webkit-transform: translateY(-50%);
+                  -moz-transform: translateY(-50%);
+                  transform: translateY(-50%);
+                  transition-timing-function: cubic-bezier(1, 1, 1, 1);
+                  // top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  line-height: 2rem;
                }
 
                .description {
                   position: absolute;
-                  margin: 1rem;
+                  top: 0;
+                  left: 0;
+                  // bottom: 0;
+                  right: 0;
+                  transition: all 200ms;
+                  transform: translateY(-75%);
+                  -webkit-transform: translateY(-75%);
+
+                  transition-timing-function: cubic-bezier(1, 1, 1, 1);
                }
-
-               h2 {
-                  margin: 1rem;
-               }
-
-
             }
 
             &:hover .figure__figcaption {
-               transform: translateY(-50%);
+               transform: translateY(-60%);
                z-index: 1;
                opacity: 1;
-               background-color: rgba(151, 96, 96, 0.623);
+               background-color: rgba(169, 243, 224, 0.555);
             }
-
 
             &:hover .figure__image {
                opacity: 0.8;
             }
+
+            &:hover h2 {
+               color: #000;
+               transform: translateY(-72%);
+               -webkit-transform: translateY(-72%);
+
+            }
+
+            &:hover .description {
+               color: #000;
+               transform: translateY(80%);
+               -webkit-transform: translateY(80%);
+            }
          }
-
-
-
-
-
-
       }
    }
 
