@@ -2,11 +2,18 @@
 
    main {
       .bio {
+         padding: 5rem 0;
+
+         &__title {
+            padding-bottom: 0;
+         }
+
          &__container {
             flex-direction: row-reverse;
 
             .bio__image {
                margin: 1.5rem;
+               max-width: 50px;
             }
          }
       }
@@ -18,6 +25,14 @@
 
             figure {
                margin-bottom: 4rem;
+
+               &__caption {
+                  h2 {
+                     // font-size: calc(1rem + 1vw)
+                  }
+
+                  .description {}
+               }
             }
          }
       }

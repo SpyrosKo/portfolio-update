@@ -159,8 +159,8 @@ main {
             border-radius: 50%;
             margin: 2rem 0;
             margin-left: 5vw;
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
          }
 
          .bio__paragraph {
@@ -182,14 +182,15 @@ main {
 
       &__container {
          display: grid;
-         grid-template-columns: 1;
+         grid-template-columns: 1fr;
          justify-items: center;
          width: 100%;
 
          .figure {
             position: relative;
-            overflow: hidden;
+            // overflow: hidden;
             margin-bottom: 7rem;
+            max-height: 100%;
 
             &__image {
                display: block;
@@ -210,36 +211,36 @@ main {
                transform: translateY(0);
                transition: all 350ms ease-in-out;
                z-index: -1;
-               // opacity: 0;
+               opacity: 0;
                text-align: left;
-               // border: 1px solid rgba(17, 17, 17, 0.274);
+               overflow: hidden;
 
                h2 {
                   position: absolute;
                   color: #fff;
                   transition: all 500ms;
-                  -webkit-transform: translateY(-50%);
-                  -moz-transform: translateY(-50%);
-                  transform: translateY(-50%);
+                  transform: translateY(0);
                   transition-timing-function: cubic-bezier(1, 1, 1, 1);
-                  // top: 0;
+                  top: 10px;
                   left: 0;
                   bottom: 0;
                   right: 0;
                   line-height: 2rem;
+                  font-size: calc(1rem + 2vw);
+
                }
 
                .description {
                   position: absolute;
-                  top: 0;
+                  top: 50px;
                   left: 0;
-                  // bottom: 0;
+                  bottom: 0;
                   right: 0;
                   transition: all 200ms;
-                  transform: translateY(-75%);
-                  -webkit-transform: translateY(-75%);
-
+                  transform: translateY(-50%);
                   transition-timing-function: cubic-bezier(1, 1, 1, 1);
+                  line-height: 1.2rem;
+                  font-size: calc(1rem + 2vw);
                }
             }
 
@@ -256,15 +257,14 @@ main {
 
             &:hover h2 {
                color: #000;
-               transform: translateY(-72%);
-               -webkit-transform: translateY(-72%);
-
+               transform: translateY(0);
+               // -webkit-transform: translateY(0);
             }
 
             &:hover .description {
                color: #000;
-               transform: translateY(80%);
-               -webkit-transform: translateY(80%);
+               transform: translateY(0);
+               // -webkit-transform: translateY(80%);
             }
          }
       }
