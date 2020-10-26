@@ -20,18 +20,37 @@
 
       .projects {
          &__container {
-            grid-template-columns: 1fr 1fr;
             grid-gap: 3rem;
+            grid-template-columns: 1fr 1fr;
 
-            figure {
+            .figure {
                margin-bottom: 4rem;
 
-               &__caption {
+               &__figcaption {
+                  transform: translateY(-0%);
+
                   h2 {
-                     // font-size: calc(1rem + 1vw)
+                     font-size: calc(1rem + 1vw);
+                     line-height: 1.2rem;
                   }
 
-                  .description {}
+                  .description {
+                     font-size: calc(0.6rem + 1vw);
+                     line-height: 1rem;
+                  }
+               }
+
+               &:hover .figure__figcaption {
+                  transform: translateY(-70%);
+               }
+
+               &:hover h2 {
+                  font-size: calc(1rem + 1vw);
+
+               }
+
+               &:hover .description {
+                  font-size: calc(0.6rem + 1vw);
                }
             }
          }

@@ -1,0 +1,17 @@
+@include tiny {
+
+   main .projects__container .figure:hover .figure__figcaption h2 {
+      font-size: calc(1.2rem + 2vw);
+      line-height: 1.3rem;
+   }
+
+   main .projects__container .figure:hover .figure__figcaption p {
+      font-size: calc(0.8rem + 1vw);
+      font-weight: 500;
+
+   }
+
+   main .projects__container .figure:hover .figure__figcaption {
+      transform: translateY(-100%);
+   }
+}
