@@ -4,27 +4,55 @@
       .bio {
          padding: 5rem 0;
 
-         &__title {
+         .bio__title {
             padding-bottom: 0;
+            padding-left: 10vw;
+
+            &::before {
+               content: '';
+               left: 10vw;
+               top: 0;
+               transform: scaleX(2);
+            }
+
+            &::after {
+               content: '';
+               left: 10vw;
+               bottom: -10px;
+            }
          }
 
          &__container {
             flex-direction: row-reverse;
+            justify-content: space-between;
+            padding-top: 3rem;
 
             .bio__image {
-               margin: 1.5rem;
-               max-width: 50px;
+               height: 200px;
+               width: 200px;
+               margin-left: 10vw;
+               margin-top: 0;
+            }
+
+            .bio__paragraph {
+               padding: 0;
             }
          }
       }
 
       .projects {
+         padding-top: 4rem;
+
+         &__title {
+            padding-bottom: 4rem;
+         }
+
          &__container {
-            grid-gap: 3rem;
+            grid-gap: 1rem;
             grid-template-columns: 1fr 1fr;
 
             .figure {
-               margin-bottom: 4rem;
+               margin-bottom: 1rem;
 
                &__figcaption {
                   transform: translateY(-0%);
@@ -55,9 +83,47 @@
             }
          }
       }
+
+      .contact {
+         &__form {
+            grid-template-columns: 1fr 1fr;
+            max-width: 500px;
+
+            .contact__title {
+               grid-row: 1;
+            }
+
+            .contact__name {
+               grid-column: 1;
+               grid-row: 2;
+               margin-right: 1rem;
+            }
+
+            .contact__email {
+               grid-column: 2;
+               grid-row: 2;
+            }
+
+            .contact__message {
+               grid-column: 1/3;
+               grid-row: 3;
+               margin-top: 2rem;
+
+               .contact__textarea {}
+
+               .contact__textarea::placeholder {}
+            }
+
+            .submit-container {
+               grid-row: 4;
+               margin-top: 1rem;
+            }
+         }
+      }
    }
 
    .footer {
       justify-content: space-evenly;
+      flex-wrap: wrap;
    }
 }

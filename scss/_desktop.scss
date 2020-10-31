@@ -1,0 +1,17 @@
+@include desktop {
+   header {
+      .hero {
+         padding-left: 10vw;
+
+         &__cta {
+            flex-direction: row;
+
+            .cta-projects,
+            .cta-contact {
+               margin-right: 2rem;
+               padding: 0 2rem;
+            }
+         }
+      }
+   }
+}
